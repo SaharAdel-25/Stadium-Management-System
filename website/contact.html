@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="styles/contact.css">
+    <!-- Bootstrap JS (Required for toast functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body> 
+<!-- Header -->
+<header>
+    <div class="logo">SPORTS</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking2.html">Booking</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Main Container -->
+<div class="container">
+    <div class="form-container">
+        <h2><i class="bi bi-pen-fill"></i> <strong> Contact Us</strong></h2> <br>
+        <form id="contactForm">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+            <input type="date" id="dob" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <label for="language">Preferred Language:</label>
+            <select id="language" required>
+                <option value="" disabled selected>Select Language</option> 
+                <option value="arabic">Arabic</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+            </select>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit"><i class="bi bi-send-fill"></i> Send </button>
+        </form>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-container">
+        <div class="info-content">
+            <h2><i class="bi bi-info-circle-fill"></i> Contact Information</h2><br><br>
+            <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:info@stadium.com">info@stadium.com</a></p>
+            <p><i class="bi bi-globe"></i> Website: <a href="index.html" target="_blank">www.stadium.com</a></p>
+            <p><i class="bi bi-telephone-fill"></i> Phone: <a href="tel:+123456789">+123 456 789</a></p>
+            <p><i class="bi bi-whatsapp"></i> WhatsApp: <a href="https://wa.me/123456789">Chat Now</a></p>
+            <p><i class="bi bi-geo-alt-fill"></i> Address: 123 Stadium Ave, City, Country</p>
+            <p><i class="bi bi-clock-fill"></i> Opening Hours: <br> 🕘 Mon - Fri: 09:00 - 18:00 <br> 🕘 Sat - Sun: 10:00 - 16:00</p>
+            <br>
+            <br>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 SPORTS. All rights reserved. We provide you with the best venues and a seamless booking experience. Your sports journey starts here – let us handle the rest so you can focus on your game! <br><br>
+        Contact us at: info@sportsbooking.com
+    </p>
+</footer>
+
+<!-- JavaScript File -->
+<script src="jsFolder/contact.js"></script>
+<!-- Bootstrap Toast Notifications -->
+<div id="toastContainer" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;"></div>
+
+</body>
+</html>

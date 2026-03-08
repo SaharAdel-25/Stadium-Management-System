@@ -1,0 +1,172 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); 
+    padding: 30px 40px;
+}
+
+.navbar .logo {
+    color: rgb(112, 233, 132);
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: rgb(214, 254, 208);
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    background: url('../img/aboutUs_background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(31, 32, 31, 0.5); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height:max-content;
+}
+
+h1, h2 {
+    color: rgb(48, 243, 129);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #d9e9e1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid green;
+    padding: 12px;
+    text-align: left;
+    background: white;
+    color: rgb(9, 121, 56);
+    font-family:'Times New Roman', Times, serif;
+   
+}
+
+th {
+    background-color: rgb(10, 160, 67);
+    color: white;
+  color:white;
+  
+}
+
+a {
+    text-decoration: none;
+    color: rgb(38, 184, 94);
+    font-weight:bolder;
+
+}
+.welcome{
+    color: #dcece5;
+   
+}
+
+a:hover {
+    text-decoration: underline;
+}
+footer{
+    
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding:10px;
+    margin: 0;}
+
+/* Responsive Design */
+@media (max-width: 992px) {  
+    
+    h1 {
+        font-size: xx-large;
+    }
+    .quote {
+        font-size: x-large;
+    }
+
+    table {
+        font-size: larger;
+    }
+    p , h2{
+        font-size:x-large;
+    }  
+    
+}
+
+@media (max-width: 768px) {
+
+
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .quote {
+        font-size: medium;
+    }
+
+    
+    table{
+        font-size: medium;
+    }
+    p{
+        font-size:large;
+    }
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .quote {
+        font-size: medium;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    table{
+        font-size: small;
+    }
+    p{
+        font-size:small;
+    }
+}

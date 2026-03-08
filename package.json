@@ -1,0 +1,29 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "r": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaharAdel-25/https---github.com-SaharAdel-25-Sports_stadium_management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaharAdel-25/https---github.com-SaharAdel-25-Sports_stadium_management/issues"
+  },
+  "homepage": "https://github.com/SaharAdel-25/https---github.com-SaharAdel-25-Sports_stadium_management#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.1",
+    "mysql2": "^3.14.0"
+  }
+}

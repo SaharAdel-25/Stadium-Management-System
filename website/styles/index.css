@@ -1,0 +1,381 @@
+body {
+    margin: 0%;
+    font-family: Arial, sans-serif;
+    color: rgb(15, 14, 14); 
+    background-color: rgb(238, 249, 237);
+    
+}
+
+/* the img below the first section */
+.backgroundimg{
+    background-image: url('../img/pexels.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+/* first section has the header and the intro place the photo and content */
+.section1, footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+
+}
+/* has logo name and links */
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+header > :nth-child(1) { 
+    justify-self: start;
+}
+
+header > :nth-child(2) { 
+    justify-self: end;
+}
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(31, 132, 31);
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    display: flex;
+    justify-content:end;
+    gap:50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(214, 254, 208);
+}
+
+
+.subheading {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color:rgb(214, 254, 208);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(82, 173, 68);
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 20px;
+    margin: 20px 0;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.learnMoreButton, .getStartedButton {
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.learnMoreButton {
+    background-color: green;
+    border: 2px solid green;
+}
+
+.learnMoreButton:hover {
+    background-color: darkgreen;
+}
+
+.getStartedButton {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.getStartedButton:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.section2, .section3, .section4 {
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.section2 span{
+    color: green;
+}
+
+.h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline the title*/
+.h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: green;
+    margin: 20px auto 0;
+}
+
+
+/*Paragraph formatting*/
+.section2 p, .section3 p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: justify;
+}
+.section3 {
+    padding-top: 0px;
+}
+
+
+/* Styling in the cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.card {
+    background: rgb(234, 250, 234);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Formatting images inside the cards*/
+.card img {
+    width: auto;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Card title formatting*/
+.card h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    padding: 40px;
+    padding-left: 60px;
+    background: linear-gradient(to right, rgb(238, 249, 237), rgb(213, 250, 213));
+    border-radius: 10px;
+}
+
+.subsection img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.subsection h2 {
+    font-size: 28px;
+    color: #222;
+    font-weight: bold;
+}
+
+.subsection h2 span {
+    color: green;
+    font-size: larger;
+}
+
+.subsection p {
+    font-size: 18px;
+    color: #444;
+}
+
+.subsection ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.subsection ul li {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subsection ul li span {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* js codes */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+/* When the element appears*/
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* media */
+
+@media (max-width: 590px) {
+
+    header {
+        grid-template-columns: 1fr;
+
+    }
+
+    header > :nth-child(2) { 
+        justify-self: center;
+    }    
+    header > :nth-child(1) { 
+        justify-self: center;
+    }   
+    
+    header nav ul {
+        gap: 10%;
+    }
+
+    h1 {
+        font-size: 35px; 
+    }
+
+    h2, .h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .subheading {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    p, .description {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .h2 {
+        font-size: 24px; 
+        text-align: center; 
+    }
+    
+    .h2::after {
+        width: 150px;
+        height: 2px;
+        margin: 10px auto 0;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .subsection {
+        flex-direction: column;
+        gap: 20%;
+
+    }
+    .subsection_content{
+        justify-items: center;
+        text-align: center;
+    }
+
+    .subsection img {
+        width: 50%;
+    }
+
+}
+

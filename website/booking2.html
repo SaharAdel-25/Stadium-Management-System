@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Booking</title>
+    <link rel="stylesheet" href="styles/booking.css">
+    <script defer src="jsFolder/schedulejs.js"></script>
+    <script defer src="jsFolder/script.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <section class="section1">
+    <h2>Welcome to Sports Booking</h2>
+    <div class="logo">SPORTS</div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </section>
+
+    
+    <header>
+        <div class="image-container">
+            <img src="img/Header_Image1.jpg" alt="Header Image" class="header-image">
+            <div class="overlay"></div>
+            <h1 class="page-title">Booking Form</h1>
+        </div>
+        <div class="step-indicator">
+            <span> Booking</span>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Calendar Section -->
+        <section class="Book-container">
+            <h2>Book Appointment</h2>
+            <div class="calendar">
+                <button class="scroll-button" id="prev-month">&lt;</button>
+                <div class="month-display" id="currentMonth"></div>
+                <button class="scroll-button" id="next-month">&gt;</button>
+            </div>
+            <div class="calendar">
+                <button class="scroll-button" id="prev-day">&lt;</button>
+                <div class="days-container" id="days-container"></div>
+                <button class="scroll-button" id="next-day">&gt;</button>
+            </div>
+        
+        
+        <h3>Available Time Slots</h3>
+        <div class="slots">
+            <button class="slot">10:00 AM</button>
+            <button class="slot">10:30 AM</button>
+            <button class="slot">11:00 AM</button>
+            <button class="slot">11:30 AM</button>
+            <button class="slot">12:00 PM</button>
+            <button class="slot">12:30 PM</button>
+            <button class="slot">01:00 PM</button>
+            <button class="slot">01:30 PM</button>
+            <button class="slot">02:00 PM</button>
+            <button class="slot">02:30 PM</button>
+            <button class="slot">03:00 PM</button>
+            <button class="slot">03:30 PM</button>
+            <button class="slot">04:00 PM</button>
+            <button class="slot">04:30 PM</button>
+            <button class="slot">05:00 PM</button>
+            <button class="slot">05:30 PM</button>
+            <button class="slot">06:00 PM</button>
+        </div>
+    </section>
+        <!-- Playground Section -->
+        <section class="choose-playground-section">
+            <h3>Choose Playground</h3>
+            <div class="playground">
+                <div class="stadium selected">
+                    <img src="img/Football_stadium.jpeg" alt="Football stadium">
+                    <p>Football Stadium</p>
+                </div>
+                <div class="stadium">
+                    <img src="img/Volleyball_stadium.jpeg" alt="Volleyball Stadium">
+                    <p>Volleyball Stadium</p>
+                </div>
+                <div class="stadium">
+                    <img src="img/Tennis_stadium.jfif" alt="Tennis Court">
+                    <p>Tennis Court</p>
+                </div>
+                <div class="stadium">
+                    <img src="img/Basketball_stadium.jpeg" alt="Basketball Court">
+                    <p>Basketball Court</p>
+                </div>
+            </div>
+        </section>
+        
+    
+        <form id="booking-form">
+            <label for="sport">Choose Sport:</label>
+            <select id="sport" name="sport" required>
+                <option value="" disabled selected>Select a Sport</option>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Volleyball">Volleyball</option>
+            </select>
+    
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" >
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" >
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" >
+            
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="Cash">Cash</option>
+                <option value="Mada">Mada</option>
+                <option value="Credit Card">Credit Card</option>
+            </select>
+    
+            <div id="card-details" class="hidden">
+                <h2>Card Details</h2>
+                <label for="card-holder">Cardholder Name:</label>
+                <input type="text" id="card-holder" name="card-holder" pattern="[A-Za-z ]+" title="Enter a valid name">
+                
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" pattern="[0-9]{16}" title="Enter a 16-digit card number">
+                
+                <div class="expiry-cvv">
+                    <div>
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="month" id="expiry-date" name="expiry-date">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" title="Enter a 3 or 4 digit CVV">
+                    </div>
+                </div>
+            </div>
+            <div class="payment-summary highlight">
+                <h2>Payment Summary</h2>
+                <p>Selected Sport: <span id="selected-sport"></span></p>
+                <p>Payment Method: <span id="selected-payment"></span></p>
+                <p>Total Price: <strong>$50.00</strong></p>
+            </div>
+            <button type="submit" class="book-sub">Confirm Booking</button>
+        </form>
+
+        <div class="selected-info">
+                <p><strong>Selected Sport:</strong> <span id="selectedSport"></span></p>
+                <p><strong>Full Name:</strong> <span id="selectedFullName"></span></p>
+                <p><strong>Phone:</strong> <span id="selectedPhone"></span></p>
+                <p><strong>Email:</strong> <span id="selectedEmail"></span></p>
+                <p><strong>Payment Method:</strong> <span id="selectedPaymentMethod"></span></p>
+                <p><strong>Selected Day:</strong> <span id="selectedDate"></span></p>
+                <p><strong>Selected Time:</strong> <span id="selectedTime"></span></p>
+                <p><strong>Playground:</strong> <span id="selectedStadium"></span></p>              
+        </div> 
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Booking System - All Rights Reserved</p>
+        <div class="contact-info">
+            <h3>Contact & Support</h3>
+            <p>Email: support@booking.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Sports Avenue, City, Country</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
